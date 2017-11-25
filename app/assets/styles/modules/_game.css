@@ -3,32 +3,45 @@
 
     @mixin clearfix;
 
-    &--gutters {
-
-        @mixin atSmall {
-		    margin-right: -20px;
+    &__section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, #353535, #0b0b0b, #251f20);
+        padding: 10px;
+        text-align: center;
+    }
+    
+    &__category {
+        & img {
+            border-radius: 20px;
         }
-	}
+    }
 
-	&--gutters > div {
-        padding: 0 20px;
+    &__list {
+        text-align: center;
+        padding: 0 50px;
 
-		@mixin atSmall {
-            padding-right: 20px;
+        & ul {
+            list-style: none;
+            background-color: #000;
+            border-radius: 10px;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
         }
-	}
+        & li {
+            width: 80px;
+            padding-top: 5px;
+            margin: 0 10px;
+        }
+    }
+
     &__item {
-        float: left;
-        width: 50%;
-        margin-top: 10px;
-        // display: flex;
-
-        &--img {
-            text-align: center;
-        }
-
-        @mixin atSmall {            
-            width: 25%;
+        &--wider {
+            width: 120px !important;
         }
     }
 
@@ -39,7 +52,6 @@
         h3 {
             margin-top: 0px;
             margin-bottom: 5px;
-            color: $mainRed;
         }
         i {
             float: right;

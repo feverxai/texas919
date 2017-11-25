@@ -13,10 +13,23 @@
 	}
 
 	&__3 {
-
 		@mixin atSmall {
 			float: left;
 			width: 25%;
+		}
+	}
+
+	&__4 {
+		@mixin atSmall {
+			float: left;
+			width: 33.33%;
+		}
+	}
+	
+	&__8 {
+		@mixin atSmall {
+			float: left;
+			width: 66.66%;
 		}
 	}
 }

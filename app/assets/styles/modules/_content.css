@@ -1,21 +1,6 @@
 .content {
-    // height: 500px;
     font-size: 1.5rem;
     position: relative;
-    
-    &__bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background: linear-gradient(
-            45deg,
-            #190503 10%, 
-            #d63d2f 100%
-        );
-    }
 
     &__menu {
         margin-top: 0;
@@ -39,7 +24,10 @@
             width: 100%;
             padding: 20px 15px 15px 15px;
             text-align: center;
-            background-color: rgba(0,0,0,0.5);
+            background:linear-gradient(to top, $gradientLow, #333);
+            border-bottom: 2px solid #000;
+            border-left: 0.5px solid #000;
+            border-right: 0.5px solid #000;
             height: 100%;
 
             display: none;
@@ -50,8 +38,8 @@
         }
 
         li.active,li:hover,li:focus {
-            background-color: rgba(0,0,0,0);
-            color: #FFF;
+            background: linear-gradient(to bottom, $gradientLow 50%, $gradientHigh);
+            color: $hoverColor;
             display: block;
 
             .stripe-border {
@@ -61,10 +49,6 @@
 
         li.mobile--open {
             display: block;
-        }
-
-        li:first-child {        
-            margin-left: 0.9px;
         }
 
         &--toggle {
@@ -78,18 +62,9 @@
     }
 
     &__main {
-        // background-color: rgba(0,0,0,0.2);
-        @mixin atSmall {
-            padding: 30px;
-        }
 
         section {
             display: none;
-            background-color: rgba(255,255,255, 0.2);
-
-            @mixin atSmall {
-                padding: 30px 90px;
-            }
         }
 
         &--active {

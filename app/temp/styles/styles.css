@@ -3836,7 +3836,11 @@ span.flatpickr-weekday {
 body, input, button, select, textarea {
 	font-family: "Kanit";
 	color: #FFF;
-	background-color: #0e0e0e;
+	background-image: url('../../assets/images/bg.jpg');
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 img {
 	max-width: 100%;
@@ -3910,6 +3914,18 @@ a:hover, a:focus {
 			width: 25%
 	}
 	}
+@media (min-width: 530px) {
+.row__4 {
+			float: left;
+			width: 33.33%
+	}
+	}
+@media (min-width: 530px) {
+.row__8 {
+			float: left;
+			width: 66.66%
+	}
+	}
 .site-header {
 	background: -webkit-gradient(linear, left top, right top, from(#6b0c06), color-stop(50%, #ff0014), to(#6b0c06));
 	background: linear-gradient(to right, #6b0c06 0%, #ff0014 50%, #6b0c06 100%);
@@ -3926,8 +3942,8 @@ a:hover, a:focus {
 		width: 360px;
 	}
 .site-footer {
-	background:-webkit-gradient(linear, left bottom, left top, from(#000), to(#4d4d4d));
-	background:linear-gradient(to top, #000, #4d4d4d);
+	background:-webkit-gradient(linear, left bottom, left top, from(#000), to(#252525));
+	background:linear-gradient(to top, #000, #252525);
 	padding-bottom: 20px;
 	padding-left: 0;
 	text-align: center;
@@ -4051,23 +4067,9 @@ a:hover, a:focus {
         position: relative;
     }
 .content {
-    // height: 500px;
     font-size: 1.5rem;
     position: relative;
 }
-.content__bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-        background: linear-gradient(
-            45deg,
-            #190503 10%, 
-            #d63d2f 100%
-        );
-    }
 .content__menu {
         margin-top: 0;
         margin-bottom: 0;
@@ -4094,7 +4096,11 @@ a:hover, a:focus {
             width: 100%;
             padding: 20px 15px 15px 15px;
             text-align: center;
-            background-color: rgba(0,0,0,0.5);
+            background:-webkit-gradient(linear, left bottom, left top, from(#1a1a1a), to(#333));
+            background:linear-gradient(to top, #1a1a1a, #333);
+            border-bottom: 2px solid #000;
+            border-left: 0.5px solid #000;
+            border-right: 0.5px solid #000;
             height: 100%;
 
             display: none;
@@ -4105,8 +4111,9 @@ a:hover, a:focus {
         }
 	}
 .content__menu li.active,.content__menu li:hover,.content__menu li:focus {
-            background-color: rgba(0,0,0,0);
-            color: #FFF;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #1a1a1a), to(#4a4a4a));
+            background: linear-gradient(to bottom, #1a1a1a 50%, #4a4a4a);
+            color: #e5b319;
             display: block;
         }
 .content__menu li.active .stripe-border, .content__menu li:hover .stripe-border, .content__menu li:focus .stripe-border {
@@ -4114,9 +4121,6 @@ a:hover, a:focus {
             }
 .content__menu li.mobile--open {
             display: block;
-        }
-.content__menu li:first-child {        
-            margin-left: 0.9px;
         }
 .content__menu--toggle {
             display: block !important;
@@ -4127,23 +4131,9 @@ a:hover, a:focus {
                 display: none !important
         }
 	}
-.content__main {
-        // background-color: rgba(0,0,0,0.2);
-    }
-@media (min-width: 530px) {
-.content__main {
-            padding: 30px
-    }
-	}
 .content__main section {
             display: none;
-            background-color: rgba(255,255,255, 0.2);
         }
-@media (min-width: 530px) {
-.content__main section {
-                padding: 30px 90px
-        }
-	}
 .content__main--active {
             display: block !important;
         }
@@ -4166,3 +4156,99 @@ a:hover, a:focus {
 .content__text .stripe-border {
             display: block;
         }
+.game {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.game::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+.game__section {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        background: -webkit-gradient(linear, left top, left bottom, from(#353535), color-stop(#0b0b0b), to(#251f20));
+        background: linear-gradient(to bottom, #353535, #0b0b0b, #251f20);
+        padding: 10px;
+        text-align: center;
+    }
+.game__category img {
+            border-radius: 20px;
+        }
+.game__list {
+        text-align: center;
+        padding: 0 50px;
+    }
+.game__list ul {
+            list-style: none;
+            background-color: #000;
+            border-radius: 10px;
+            padding: 0;
+            margin: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+.game__list li {
+            width: 80px;
+            padding-top: 5px;
+            margin: 0 10px;
+        }
+.game__item--wider {
+            width: 120px !important;
+        }
+.game__howto {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+.game__howto h3 {
+            margin-top: 0px;
+            margin-bottom: 5px;
+        }
+.game__howto i {
+            float: right;
+            margin-right: 30px;
+        }
+.game__detail {
+        padding: 0px !important;
+        position: relative;
+
+    }
+.game__detail::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+.game__detail--close {
+            position: absolute;
+            font-weight: bold;
+            top: 5px;
+            right: 5px;
+            background-color: #000;
+            padding: 2.5px 12.5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+.game__detail--desc {
+            padding: 20px;
+        }
+.game__detail--desc h3 {
+                margin-bottom: 0;
+            }
+.game__detail--desc p {
+                margin: 5px;
+            }

@@ -20,7 +20,7 @@ class TabMenu {
 		$(this).siblings().children("li").removeClass("active");
 		$(this).children("li").addClass("active");
 
-		if(tabContent == "#game" || tabContent == "#promotion") {
+		if(tabContent == "#promotion") {
 			$(tabContent).siblings().removeClass("content__main--active");
 			$(tabContent).siblings().removeClass("content__main--active-flex");
 			$(tabContent).addClass("content__main--active-flex");
