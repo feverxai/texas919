@@ -1,0 +1,57 @@
+.promotion {
+    flex-wrap: wrap;
+
+    @mixin clearfix;
+
+    &--gutters {
+
+        @mixin atSmall {
+		    margin-right: -20px;
+        }
+	}
+
+	&--gutters > div {
+        padding: 0 20px;
+
+		@mixin atSmall {
+            padding-right: 20px;
+        }
+	}
+    &__item {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+        // display: flex;
+
+        &--img {
+            text-align: center;
+        }
+
+        @mixin atSmall {            
+            width: 50%;
+        }
+    }
+
+    &__detail {
+        padding: 0px !important;
+        position: relative;
+
+        @mixin clearfix;
+
+        &--close {
+            position: absolute;
+            font-weight: bold;
+            top: 5px;
+            right: 5px;
+            background-color: #000;
+            padding: 2.5px 12.5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        &--desc {
+            padding: 20px;
+        }
+
+    }
+}

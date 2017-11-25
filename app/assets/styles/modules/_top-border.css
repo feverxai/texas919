@@ -1,0 +1,29 @@
+.stripe-border {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: repeating-linear-gradient(
+        to right,
+        #000 0,
+        #000 16.66%,
+        $mainRed 16.66%,
+        $mainRed 33.33%
+    );
+    display: none;
+
+    &--top {
+        top: 0;
+    }
+
+    &--bottom {
+        bottom: 0;
+        background: repeating-linear-gradient(
+            to right,
+            #000 0,
+            #000 2.78%,
+            $mainRed 2.78%,
+            $mainRed 5.56%
+        );
+    }
+}

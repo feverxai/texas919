@@ -1,0 +1,120 @@
+.content {
+    // height: 500px;
+    font-size: 1.5rem;
+    position: relative;
+    
+    &__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: linear-gradient(
+            45deg,
+            #190503 10%, 
+            #d63d2f 100%
+        );
+    }
+
+    &__menu {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        @mixin atSmall {
+            display: flex;
+            justify-content: space-around;
+            align-content: stretch;
+        }
+
+        a {
+            width: 100%;
+        }
+
+        li {
+            position: relative;
+            list-style: none;
+            font-size: 1.8rem;
+            width: 100%;
+            padding: 20px 15px 15px 15px;
+            text-align: center;
+            background-color: rgba(0,0,0,0.5);
+            height: 100%;
+
+            display: none;
+
+            @mixin atSmall {
+                display: block;
+            }
+        }
+
+        li.active,li:hover,li:focus {
+            background-color: rgba(0,0,0,0);
+            color: #FFF;
+            display: block;
+
+            .stripe-border {
+                display: block;
+            }
+        }
+
+        li.mobile--open {
+            display: block;
+        }
+
+        li:first-child {        
+            margin-left: 0.9px;
+        }
+
+        &--toggle {
+            display: block !important;
+            padding: 0px !important;
+
+            @mixin atSmall {
+                display: none !important;
+            }
+        }
+    }
+
+    &__main {
+        // background-color: rgba(0,0,0,0.2);
+        @mixin atSmall {
+            padding: 30px;
+        }
+
+        section {
+            display: none;
+            background-color: rgba(255,255,255, 0.2);
+
+            @mixin atSmall {
+                padding: 30px 90px;
+            }
+        }
+
+        &--active {
+            display: block !important;
+        }
+        &--active-flex {
+            display: flex !important;
+        }
+    }
+
+    &__text {
+        position: relative;
+        padding: 0 30px 30px 30px;
+
+        li {
+            list-style-type: square;
+            color: #FFF;
+        }
+
+        li>span {
+            color: #FFF;
+        }
+
+        .stripe-border {
+            display: block;
+        }
+    }
+}

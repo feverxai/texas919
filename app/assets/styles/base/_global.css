@@ -1,0 +1,26 @@
+body, input, button, select, textarea {
+	font-family: "Kanit";
+	color: #FFF;
+	background-color: #0e0e0e;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {				
+	color: #FFF;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	color: $hoverColor;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.flatpickr-calendar, .flatpickr-time input {
+	font-size: 18px;
+}

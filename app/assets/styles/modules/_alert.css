@@ -1,0 +1,15 @@
+.alert {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;;
+    // color: $mainRed;
+    &--red {
+        background-color: $mainRed;
+        font-weight: bold;
+    }
+
+    &--success {
+        background-color: #5cb85c;
+        font-weight: bold;
+    }
+}

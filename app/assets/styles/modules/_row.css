@@ -1,0 +1,22 @@
+.row {
+	
+	@mixin clearfix;
+	
+	&--gutters {
+		margin-right: -10px;
+	}
+
+	&--gutters > div {
+		padding-right: 10px;
+
+		/*height: 150px;*/
+	}
+
+	&__3 {
+
+		@mixin atSmall {
+			float: left;
+			width: 25%;
+		}
+	}
+}

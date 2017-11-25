@@ -1,0 +1,75 @@
+.inform {
+    text-align: center;
+
+    &--not-logged-in {
+        font-size: 1.8rem;
+    }
+
+    &--logged-in form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__bank {
+        margin: 30px 0 0 0;
+        width: 250px;
+
+        @mixin atSmall {
+            width: 450px;
+        }
+
+        select {
+            margin-left: 0;
+            width: 250px;
+
+            @mixin atSmall {
+                width: auto;
+                margin-left: 20px;
+            }
+        }
+    }
+    
+    &__slip {       
+        margin: 30px 0;
+        width: 250px;
+
+        @mixin atSmall {
+            width: 450px;
+        }
+
+        input[type="file"] {
+            margin-left: 0;
+            width: 250px;
+
+            @mixin atSmall {
+                width: auto;
+                margin-left: 20px;
+            }
+        }
+        
+        label.error {
+            display: block;
+            background-color: $mainRed;
+        }
+    }
+    
+    .submit {
+        margin: 20px 0;
+    }
+    
+    button.active, .btn:hover, .btn:focus {
+        background-color: #FFF;
+        color: $mainRed;
+    }
+
+    &__selector {
+        margin: 0;
+        padding: 20px 0;
+
+        @mixin atSmall {
+            margin: 20px 0;
+            padding: 0;
+        }
+    }
+}

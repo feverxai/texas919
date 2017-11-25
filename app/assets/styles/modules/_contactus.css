@@ -1,0 +1,43 @@
+.contactus {
+    text-align: center;
+    padding: 20px;
+
+    &__headline {
+
+        h3 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+
+        input,textarea {
+            background-color: transparent;
+            border: 1px solid #FFF;
+            padding: 10px;
+            display: block;
+            margin: 10px;
+            width: 240px;
+            
+            @mixin atSmall {
+                width: 500px;
+            }
+        }
+        input::placeholder, textarea::placeholder {
+            color: #FFF;
+        }
+
+        label.error {
+            // padding: 5px;
+            // border-radius: 10px;
+            //background-color: $mainRed;
+            color: $mainRed;
+        }
+    }
+}

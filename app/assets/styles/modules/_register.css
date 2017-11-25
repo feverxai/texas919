@@ -1,0 +1,83 @@
+.register {
+    text-align: center;
+    padding-top: 20px;
+
+    @mixin atSmall {
+        padding-top: 0;
+    }
+    h2 {
+        margin: 0;
+    }
+    &--flex-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__step1 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 20px 0;
+        @mixin atSmall {
+            margin-top: 60px;
+        }
+    }
+    &__sex {
+        margin: 10px 0;
+        text-align: left;
+        width: 250px;
+
+        @mixin atSmall {
+            width: 450px;
+        }
+
+        input[name='member_sex'] {
+            appearance: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+            margin-left: 10px;
+
+            @mixin atSmall {
+                margin-left: 40px;
+            }
+            &:after {
+                font-family: 'FontAwesome';
+                display: inline-block;
+                text-align: center;
+                font-size: 30px;
+                content: attr(data-icon);
+                padding: 10px 10px;
+                border-radius: 15px;
+                color: rgba(255, 255, 255, 0.2); // color: rgba(0,0,0,.4);
+                transition: all 1s;
+            }
+            &:checked {
+                &:after {
+                    // font-size: 40px;
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+    &__bank {
+        margin: 10px 0;
+        text-align: left;
+        width: 250px;
+
+        @mixin atSmall {
+            width: 450px;
+        }
+
+        select {
+            margin-left: 20px;
+        }
+    }
+
+    input[type="submit"] {
+        margin-bottom: 20px;
+
+        @mixin atSmall {
+            margin-bottom: 0;
+        }
+    }
+}

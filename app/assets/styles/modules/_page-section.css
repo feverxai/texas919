@@ -1,0 +1,12 @@
+.page-section {
+	padding: 0.2rem 0;
+
+	@mixin atSmall {
+		padding: 1rem 0;
+	}
+	
+	&--t-margin {
+		margin-top: 20px;
+		margin-bottom: 8px;
+	}
+}

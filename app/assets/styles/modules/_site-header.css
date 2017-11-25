@@ -1,0 +1,13 @@
+.site-header {
+	background: linear-gradient(to right, #6b0c06 0%, #ff0014 50%, #6b0c06 100%);
+	text-align: center;
+	display: none;
+	@mixin atSmall {
+		display: block;
+	}
+
+	&--logo {
+		padding: 30px;
+		width: 360px;
+	}
+}

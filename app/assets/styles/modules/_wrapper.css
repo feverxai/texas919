@@ -1,0 +1,25 @@
+.wrapper {
+	max-width: 1280px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+
+	&--medium {
+		max-width: 976px;
+	}
+
+	&--narrow {
+		max-width: 470px;
+	}
+
+	&--p-narrow {	
+		// padding-left: 0px;
+		// padding-right: 40px;
+
+		@mixin atMedium {
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+	}
+}

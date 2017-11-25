@@ -1,0 +1,22 @@
+.table {
+    width: 100%;
+    max-width: 100%;
+
+    & th {
+        padding: 20px;
+    }
+
+    & td {
+        padding: 10px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--striped {
+        &>tbody>tr:nth-of-type(odd) {
+            background-color: rgba(255,255,255,0.2);
+        }
+    }
+}

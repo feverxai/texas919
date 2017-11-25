@@ -1,0 +1,62 @@
+.install {
+    text-align: center;
+    padding-top: 20px;
+    
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    &--no-t-margin {
+        margin-top: 0;
+    }
+
+    &__download {
+        margin-bottom: 20px;
+
+        img {
+            width: 80px;
+
+            @mixin atSmall {
+                width: auto;
+            }
+        }
+    }
+
+    iframe {
+        width: 250px;
+
+        @mixin atSmall {
+            width: auto;
+        }
+    }
+
+    .active, .btn:hover, .btn:focus {
+        background-color: #FFF;
+        color: $mainRed;
+    }
+
+    &__android {
+        display: none;
+        margin: 0 10px;
+
+        &--open {
+            display: block;
+            animation: fadein 3s;
+        }
+    }
+
+    &__ios {
+        display: none;
+        margin: 0 10px;
+
+        &--open {
+            display: block;
+            animation: fadein 3s;
+        }
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
